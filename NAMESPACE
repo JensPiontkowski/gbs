@@ -8,3 +8,9 @@ exportPattern(".")
 import(
   nlme
 )
+importFrom("graphics", "abline", "boxplot.default", "hist", "layout",
+           "layout.show", "lines", "par", "plot", "points", "rug",
+             "text")
+importFrom("stats", "cor", "dlogis", "dnorm", "dt", "ecdf",
+           "integrate", "ks.test", "median", "nlm", "qchisq", "rexp", "rgamma",
+           "rlogis", "rnorm", "rt", "sd", "uniroot")

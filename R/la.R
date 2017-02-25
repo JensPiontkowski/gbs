@@ -8,7 +8,7 @@ function(theta, x, nu = 1.0, kernel = "normal"){
        vi    <- (-2) * (wg(argu, nu, ker))
        a     <- ((x / beta) + (beta / x) - 2) / (alpha^3)
        b     <- vi * a
-       c     <- sum(b) - (n / alpha)
+       c     <- sum(b) - (nu / alpha)
        return(c)
    }
 

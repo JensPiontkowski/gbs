@@ -20,7 +20,6 @@ searchMode(x)
   code{searchMode()} return the empirical mode (modal value) of the data.
 }
 
-\references{}
 
 \author{
 Barros, Michelli <michelli.karinne@gmail.com> \cr 

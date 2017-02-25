@@ -13,7 +13,7 @@ considering type II censored data.
 }
 
 \usage{
-  ksgbsc(x, status, kernel = "normal", graph = FALSE, 
+  ksgbsc(x, status, kernel = "normal", nuFixed = 1, graph = FALSE, 
          mainTitle = "Cumulative distribution function", xLabel = "data", 
          yLabel = "cdf")
 }
@@ -28,6 +28,7 @@ equal to one (1) or
                 by means of which the GBSD is obtained. The kernels: 
                 {"laplace"}, {"logistic"}, {"normal"} and 
                 {"t"} are available.}
+  \item{nuFixed}{Shape parameter corresponding to the degrees of freedom of the t                          distribution.}
   \item{graph}{Logical; if TRUE (default), the cdf plot is provided.}
   \item{mainTitle}{Main title of the graph.}
   \item{xLabel}{A title for the \eqn{x} axis.}
@@ -71,8 +72,8 @@ x <- rgbs(300, alpha = 1.0, beta = 1.0,  nu = 1.0, kernel = "normal")
 pc     <- 20
 status <- c(rep(1, floor((length(x) - pc) * (length(x)) / 100)), 
             rep(0, (floor(pc * (length(x)) / 100))))
-nuFixed = 1
-ksgbsc(x, status, kernel = "normal", graph = TRUE, xLabel = "Data",
+
+ksgbsc(x, status, kernel = "normal", nuFixed = 1, graph = TRUE, xLabel = "Data",
         yLabel = "Cumulative distribution function")
 }
 

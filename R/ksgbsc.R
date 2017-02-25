@@ -1,15 +1,16 @@
 `ksgbsc` <-
 function(x,	
-                   status,
-                   kernel    = "normal",
-                   graph     = FALSE,
+           status,
+           kernel    = "normal",
+           nuFixed = 1.0,
+           graph     = FALSE,
 		       mainTitle = "Cumulative distribution function",
 		       xLabel    = "data",
 		       yLabel    = "cdf"){
 
-                    estimates <- switch(kernel,
-                                        "normal" = mlegbsc(x, status),
-                                        "t"      = mlegbstc(x, nuFixed, status))
+    estimates <- switch(kernel,
+                        "normal" = mlegbsc(x, status),
+                        "t"      = mlegbstc(x, nuFixed, status))
 
     a  <- estimates$alphaEstimate
     b  <- estimates$betaEstimate
